@@ -2,6 +2,7 @@
 //              Plan to add this project to git repository
 //              Created as a blank activity with SDK 16 (os4.1)
 
+/*
 package com.ok88.andydev.jcblankapp_windev;
 
 import android.support.v7.app.ActionBarActivity;
@@ -41,3 +42,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+*/
