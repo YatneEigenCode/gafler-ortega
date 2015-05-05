@@ -1,4 +1,9 @@
-//5-5-15 JChoy Copied MainActivity.java contents from jcblankapp_windev.
+//5-5-15 JChoy New app project Jcapp_Cholly_B by Copiing MainActivity.java contents from jcblankapp_windev.
+//          Successfully renamed app project by changing these 4 files:
+//          app.imp, build.gradle, jcapp_cholly_b/MainActivity.java, and strings.xml
+//          Note: also commented out everything in jcblankapp_windev/MainActivity.java
+//          In git, this new project is a BRANCH (jcapp_cholly_b) of the main repository instead of a subfolder.
+//
 
 package com.ok88.andydev.jcapp_cholly_b;
 
