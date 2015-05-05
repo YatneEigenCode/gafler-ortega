@@ -3,6 +3,7 @@
 //5-2-2015 JChoy - onConfigurationChanged crashes.
 //todo: store events in 100 length log
 
+/*
 package com.ok88.andydev.jcblankapp_windev;
 
 import android.support.v7.app.ActionBarActivity;
@@ -69,6 +70,7 @@ public class MainActivity extends ActionBarActivity {
             vibrator.vibrate(200);
         }
     }
+    */
 
     /* this crashes when orientation is landscape    
     @Override
@@ -80,6 +82,7 @@ public class MainActivity extends ActionBarActivity {
     }
     */
     
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -102,3 +105,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+*/
