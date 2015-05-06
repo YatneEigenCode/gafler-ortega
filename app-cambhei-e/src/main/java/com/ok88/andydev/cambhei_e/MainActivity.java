@@ -1,5 +1,5 @@
 //5-6-15 JChoy New app project Cambhei-E by Copied from Cholly-B.
-//5-6-15 JChoy v0.1.1004 - Prepare to write wifi results to textview.
+//5-6-15 JChoy v0.1.1006 - Write wifi results to textview.
 
 package com.ok88.andydev.cambhei_e;
 
@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
         actTextView = (TextView)findViewById(R.id.hello_tv);
         actTextView.setText("WIfi info goes here");
 
-        tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        actTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         actTextView.setText(getWifiName(this));
     }
 
