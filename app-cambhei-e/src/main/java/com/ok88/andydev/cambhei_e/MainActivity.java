@@ -8,9 +8,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.net.wifi.*;
+import android.net.NetworkInfo;
 
 
 public class MainActivity extends ActionBarActivity {
+
+ public String getWifiName(Context context) {
+    WifiManager manager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+    if (manager.isWifiEnabled()) {
+       WifiInfo wifiInfo = manager.getConnectionInfo();
+       if (wifiInfo != null) {
+          DetailedState state = WifiInfo.getDetailedStateOf(wifiInfo.getSupplicantState());
+          if (state == DetailedState.CONNECTED || state == DetailedState.OBTAINING_IPADDR) {
+              return wifiInfo.getSSID();
+          }
+       }
+    }
+    return null;
+ }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
