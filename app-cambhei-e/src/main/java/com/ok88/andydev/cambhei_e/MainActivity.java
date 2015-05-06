@@ -1,6 +1,5 @@
 //5-6-15 JChoy New app project Cambhei-E by Copied from Cholly-B.
-//       Changed 5 files: app.iml, build.gradle, andydev/*/MainActivity.java, AndroidManifest.xml, and strings.xml
-//       Created as parallel dir structure instead of branch, using tortoiseSvn against gitHub
+//5-6-15 JChoy v0.1.1004 - Prepare to write wifi results to textview.
 
 package com.ok88.andydev.cambhei_e;
 
@@ -10,28 +9,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.net.wifi.*;
 import android.net.NetworkInfo;
-
+import android.net.NetworkInfo.*;
+import android.content.Context;
 
 public class MainActivity extends ActionBarActivity {
+    public TextView actTextView;
 
- public String getWifiName(Context context) {
-    WifiManager manager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
-    if (manager.isWifiEnabled()) {
-       WifiInfo wifiInfo = manager.getConnectionInfo();
-       if (wifiInfo != null) {
-          DetailedState state = WifiInfo.getDetailedStateOf(wifiInfo.getSupplicantState());
-          if (state == DetailedState.CONNECTED || state == DetailedState.OBTAINING_IPADDR) {
-              return wifiInfo.getSSID();
-          }
-       }
+    public String getWifiName(Context context) {
+        WifiManager manager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        if (manager.isWifiEnabled()) {
+           WifiInfo wifiInfo = manager.getConnectionInfo();
+           if (wifiInfo != null) {
+              DetailedState state = WifiInfo.getDetailedStateOf(wifiInfo.getSupplicantState());
+              if (state == DetailedState.CONNECTED || state == DetailedState.OBTAINING_IPADDR) {
+                  return wifiInfo.getSSID();
+              }
+           }
+        }
+        return null;
     }
-    return null;
- }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        actTextView = (TextView)findViewById(R.id.hello_tv);
+        actTextView.setText("WIfi info goes here");
     }
 
 
