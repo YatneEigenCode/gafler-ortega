@@ -11,6 +11,8 @@ import android.net.wifi.*;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.*;
 import android.content.Context;
+import android.widget.*;
+import android.util.TypedValue;
 
 public class MainActivity extends ActionBarActivity {
     public TextView actTextView;
@@ -35,6 +37,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         actTextView = (TextView)findViewById(R.id.hello_tv);
         actTextView.setText("WIfi info goes here");
+
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
+        actTextView.setText(getWifiName(this));
     }
 
 
