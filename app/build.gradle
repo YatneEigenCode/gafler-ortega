@@ -9,7 +9,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 21
         versionCode 1
-        versionName "0.1.1018"
+        versionName "Semdyl-D v0.4.1019"
     }
     buildTypes {
         release {
